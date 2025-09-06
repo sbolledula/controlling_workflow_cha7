@@ -84,7 +84,7 @@ jobs:
         run: |
           echo "Something went wrong!"
           echo "Check the logs of previous steps for details."
-          echo "{{ github.workflow }} failed"
-          echo "{{ github }}"
+          echo "${{ toJSON(github.workflow) }} failed"
+          echo "${{ toJson(github) }}"
 
 
