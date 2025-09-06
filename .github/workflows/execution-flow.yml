@@ -75,3 +75,15 @@ jobs:
         run: ls
       - name: Deploy
         run: echo "Deploying..."
+  report:
+    if : failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo-something
+        run: |
+          echo "Something went wrong!"
+          echo "Check the logs of previous steps for details."
+          echo "{{ github.workflow }} failed"
+          echo "{{ github }}"
+
+
