@@ -1,0 +1,9 @@
+name: Reusable Template Workflow
+on: workflow_call
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get build artifacts
+        run: echo "Add your build artifact commands here"
+

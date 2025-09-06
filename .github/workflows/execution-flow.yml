@@ -75,6 +75,10 @@ jobs:
         run: ls
       - name: Deploy
         run: echo "Deploying..."
+  reusable-template-call:
+    needs: build
+    uses: ./.github/workflows/reusable-template.yml
+
   report:
     if : failure()
     needs: [lint, deploy]
